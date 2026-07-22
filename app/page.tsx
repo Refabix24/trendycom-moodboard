@@ -1,4 +1,5 @@
 import { ChapterNav } from "@/components/scrollytelling/chapter-nav"
+import { Concepto } from "@/components/scrollytelling/concepto"
 import { Portada } from "@/components/scrollytelling/portada"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -16,7 +17,9 @@ export default function Page() {
 
       <Portada />
 
-      {SECTIONS.filter((meta) => meta.n !== 1).map((meta) => (
+      <Concepto />
+
+      {SECTIONS.filter((meta) => meta.n !== 1 && meta.n !== 2).map((meta) => (
         <SectionShell key={meta.id} meta={meta} />
       ))}
 

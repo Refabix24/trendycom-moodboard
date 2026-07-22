@@ -17,7 +17,10 @@ export function ChapterNav() {
           }
         })
       },
-      { threshold: 0.4, rootMargin: "-20% 0px -40% 0px" },
+      // Center-line detection: whichever section crosses the middle of the
+      // viewport becomes active. Works for sections of any height (including
+      // sections taller than one viewport, like "Concepto e Inspiración").
+      { threshold: 0, rootMargin: "-50% 0px -50% 0px" },
     )
 
     SECTIONS.forEach((s) => {
