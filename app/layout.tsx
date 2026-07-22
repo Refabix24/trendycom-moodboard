@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${bangers.variable} bg-background`}
+      className={`light ${inter.variable} ${bangers.variable} bg-background`}
     >
       <body className="antialiased font-sans">
         {children}
