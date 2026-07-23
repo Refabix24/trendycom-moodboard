@@ -3,6 +3,7 @@ import { Concepto } from "@/components/scrollytelling/concepto"
 import { InterfazComic } from "@/components/scrollytelling/interfaz-comic"
 import { NavegacionNarrativa } from "@/components/scrollytelling/navegacion-narrativa"
 import { OrganizacionCatalogos } from "@/components/scrollytelling/organizacion-catalogos"
+import { PaletaColores } from "@/components/scrollytelling/paleta-colores"
 import { Portada } from "@/components/scrollytelling/portada"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -28,16 +29,19 @@ export default function Page() {
 
       <OrganizacionCatalogos />
 
+      <PaletaColores />
+
       {SECTIONS.filter(
   (meta) =>
     meta.n !== 1 &&
     meta.n !== 2 &&
     meta.n !== 3 &&
     meta.n !== 4 &&
-    meta.n !== 5,
+    meta.n !== 5 &&
+    meta.n !== 6,
 ).map((meta) => (
-        <SectionShell key={meta.id} meta={meta} />
-      ))}
+  <SectionShell key={meta.id} meta={meta} />
+))}
 
       <footer className="border-t-4 border-ink bg-navy px-5 py-10 text-center">
         <p className="text-comic text-2xl text-yellow">TrendyCom</p>
