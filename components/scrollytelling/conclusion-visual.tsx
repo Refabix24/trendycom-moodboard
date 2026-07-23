@@ -37,7 +37,7 @@ export function ConclusionVisual() {
               </span>
 
               <span className="text-comic text-sm uppercase tracking-[0.2em] text-navy/70">
-                Capítulo 08
+                Cierre de la propuesta
               </span>
             </div>
           </Reveal>

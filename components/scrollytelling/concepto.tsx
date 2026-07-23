@@ -18,7 +18,7 @@ const ACCENT = "var(--color-yellow)"
  * bottom-right, text woven around).
  *
  * The section keeps the same id / data-section / aria attributes as the
- * standard shell so the chapter-2 indicator activates correctly.
+ * standard shell so the section-2 indicator activates correctly.
  */
 export function Concepto() {
   return (
@@ -47,7 +47,7 @@ export function Concepto() {
                 02
               </span>
               <span className="text-comic text-sm uppercase tracking-[0.2em] text-navy/70">
-                Capítulo 02
+                Referencias visuales
               </span>
             </div>
           </Reveal>
@@ -151,7 +151,7 @@ export function Concepto() {
             />
           </Reveal>
 
-          {/* Bloque 4 — conclusión, bottom-left on desktop (highlighted) */}
+          {/* Bloque 4 — conclusión, bottom-left on desktop */}
           <Reveal
             className="lg:col-start-1 lg:col-end-6 lg:row-start-4"
             delay={40}
