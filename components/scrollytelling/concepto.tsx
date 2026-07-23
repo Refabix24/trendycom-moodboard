@@ -156,7 +156,7 @@ export function Concepto() {
             className="lg:col-start-1 lg:col-end-6 lg:row-start-4"
             delay={40}
           >
-            <TextBlock n="04" highlight>
+            <TextBlock n="04">
               Para lograrlo, la dirección visual toma como grandes referentes
               como las plataformas oficiales de Marvel y DC Comics, buscando
               construir un entorno digital impactante y creativo donde cada
