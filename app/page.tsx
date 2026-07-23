@@ -1,5 +1,6 @@
 import { ChapterNav } from "@/components/scrollytelling/chapter-nav"
 import { Concepto } from "@/components/scrollytelling/concepto"
+import { InterfazComic } from "@/components/scrollytelling/interfaz-comic"
 import { Portada } from "@/components/scrollytelling/portada"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -19,14 +20,20 @@ export default function Page() {
 
       <Concepto />
 
-      {SECTIONS.filter((meta) => meta.n !== 1 && meta.n !== 2).map((meta) => (
+      <InterfazComic />
+
+      {SECTIONS.filter(
+        (meta) => meta.n !== 1 && meta.n !== 2 && meta.n !== 3,
+      ).map((meta) => (
         <SectionShell key={meta.id} meta={meta} />
       ))}
 
       <footer className="border-t-4 border-ink bg-navy px-5 py-10 text-center">
         <p className="text-comic text-2xl text-yellow">TrendyCom</p>
+
         <p className="mt-2 text-sm text-paper/70">
-          Presentación digital del moodboard e identidad visual — Propuesta académica.
+          Presentación digital del moodboard e identidad visual — Propuesta
+          académica.
         </p>
       </footer>
     </main>
