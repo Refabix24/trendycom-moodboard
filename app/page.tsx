@@ -8,6 +8,7 @@ import { OrigenTrendyMan } from "@/components/scrollytelling/origen-trendyman"
 import { OrganizacionCatalogos } from "@/components/scrollytelling/organizacion-catalogos"
 import { PaletaColores } from "@/components/scrollytelling/paleta-colores"
 import { Portada } from "@/components/scrollytelling/portada"
+import { ProductosInteraccion } from "@/components/scrollytelling/productos-interaccion"
 import { ReferentesComerciales } from "@/components/scrollytelling/referentes-comerciales"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -46,8 +47,10 @@ export default function Page() {
 
       <ReferentesComerciales />
 
+      <ProductosInteraccion />
+
       {SECTIONS.filter(
-        (meta) => ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].includes(meta.n),
+        (meta) => ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].includes(meta.n),
       ).map((meta) => (
         <SectionShell key={meta.id} meta={meta} />
       ))}
