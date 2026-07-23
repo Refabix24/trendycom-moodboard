@@ -4,6 +4,8 @@ import { InterfazComic } from "@/components/scrollytelling/interfaz-comic"
 import { NavegacionNarrativa } from "@/components/scrollytelling/navegacion-narrativa"
 import { OrganizacionCatalogos } from "@/components/scrollytelling/organizacion-catalogos"
 import { PaletaColores } from "@/components/scrollytelling/paleta-colores"
+import { SistemaTipografico } from "@/components/scrollytelling/sistema-tipografico"
+import { IlustracionesEstiloGrafico } from "@/components/scrollytelling/ilustraciones-estilo-grafico"
 import { Portada } from "@/components/scrollytelling/portada"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -31,6 +33,10 @@ export default function Page() {
 
       <PaletaColores />
 
+      <SistemaTipografico />
+
+      <IlustracionesEstiloGrafico />
+
       {SECTIONS.filter(
   (meta) =>
     meta.n !== 1 &&
@@ -38,7 +44,9 @@ export default function Page() {
     meta.n !== 3 &&
     meta.n !== 4 &&
     meta.n !== 5 &&
-    meta.n !== 6,
+    meta.n !== 6 &&
+    meta.n !== 7 &&
+    meta.n !== 8,
 ).map((meta) => (
   <SectionShell key={meta.id} meta={meta} />
 ))}
