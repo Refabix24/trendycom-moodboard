@@ -1,6 +1,7 @@
 import { ChapterNav } from "@/components/scrollytelling/chapter-nav"
 import { Concepto } from "@/components/scrollytelling/concepto"
 import { EvolucionLogotipo } from "@/components/scrollytelling/evolucion-logotipo"
+import { HeaderBannerPrincipal } from "@/components/scrollytelling/header-banner-principal"
 import { IlustracionesEstiloGrafico } from "@/components/scrollytelling/ilustraciones-estilo-grafico"
 import { InterfazComic } from "@/components/scrollytelling/interfaz-comic"
 import { NavegacionNarrativa } from "@/components/scrollytelling/navegacion-narrativa"
@@ -49,8 +50,10 @@ export default function Page() {
 
       <ProductosInteraccion />
 
+      <HeaderBannerPrincipal />
+
       {SECTIONS.filter(
-        (meta) => ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].includes(meta.n),
+        (meta) => ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].includes(meta.n),
       ).map((meta) => (
         <SectionShell key={meta.id} meta={meta} />
       ))}
