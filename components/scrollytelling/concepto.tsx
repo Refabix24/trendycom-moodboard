@@ -1,6 +1,22 @@
 import { Reveal } from "./reveal"
 
 const ACCENT = "var(--color-yellow)"
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+
+function withBasePath(src: string) {
+  if (
+    !BASE_PATH ||
+    src.startsWith(`${BASE_PATH}/`) ||
+    src.startsWith("http://") ||
+    src.startsWith("https://") ||
+    src.startsWith("data:") ||
+    src.startsWith("blob:")
+  ) {
+    return src
+  }
+
+  return `${BASE_PATH}${src.startsWith("/") ? src : `/${src}`}`
+}
 
 /**
  * Section 02 — "Concepto e Inspiración".
@@ -219,6 +235,8 @@ function ReferencePanel({
   caption: string
   badge: string
 }) {
+  const resolvedSrc = withBasePath(src || "/placeholder.svg")
+
   return (
     <figure className="comic-panel relative flex h-full flex-col overflow-hidden rounded-xl bg-card">
       {/* Yellow label cartela */}
@@ -236,7 +254,7 @@ function ReferencePanel({
         <span aria-hidden className="halftone pointer-events-none absolute inset-0" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src || "/placeholder.svg"}
+          src={resolvedSrc}
           alt={alt}
           loading="lazy"
           decoding="async"
