@@ -6,6 +6,7 @@ import { OrganizacionCatalogos } from "@/components/scrollytelling/organizacion-
 import { PaletaColores } from "@/components/scrollytelling/paleta-colores"
 import { SistemaTipografico } from "@/components/scrollytelling/sistema-tipografico"
 import { IlustracionesEstiloGrafico } from "@/components/scrollytelling/ilustraciones-estilo-grafico"
+import { OrigenTrendyMan } from "@/components/scrollytelling/origen-trendyman"
 import { Portada } from "@/components/scrollytelling/portada"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -37,6 +38,8 @@ export default function Page() {
 
       <IlustracionesEstiloGrafico />
 
+      <OrigenTrendyMan />
+
       {SECTIONS.filter(
   (meta) =>
     meta.n !== 1 &&
@@ -44,9 +47,9 @@ export default function Page() {
     meta.n !== 3 &&
     meta.n !== 4 &&
     meta.n !== 5 &&
-    meta.n !== 6 &&
     meta.n !== 7 &&
-    meta.n !== 8,
+    meta.n !== 8 &&
+    meta.n !== 9,
 ).map((meta) => (
   <SectionShell key={meta.id} meta={meta} />
 ))}
