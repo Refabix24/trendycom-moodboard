@@ -2,8 +2,10 @@ import Image from "next/image"
 
 /**
  * Section 1 — Portada.
- * Composición principal con TrendyMan, logotipo oficial transparente y
- * globo de diálogo conectado visualmente con la mascota.
+ *
+ * TrendyMan y su globo de diálogo ahora forman una sola imagen PNG.
+ * Esto evita que ambos elementos se separen o deformen al cambiar
+ * el tamaño de la pantalla.
  */
 export function Portada() {
   return (
@@ -13,7 +15,6 @@ export function Portada() {
       aria-labelledby="portada-title"
       className="relative flex min-h-screen w-full flex-col justify-center overflow-hidden px-5 py-16 sm:px-8 lg:px-16"
     >
-      {/* Fondo */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <span
           className="intro intro-fade absolute inset-0 halftone"
@@ -37,7 +38,6 @@ export function Portada() {
       />
 
       <div className="mx-auto w-full max-w-7xl">
-        {/* Título y créditos centrados */}
         <header className="relative z-30 text-center">
           <h1
             id="portada-title"
@@ -63,25 +63,8 @@ export function Portada() {
           </div>
         </header>
 
-        {/* Globo en móvil */}
-        <div
-          className="intro intro-pop relative z-30 mx-auto mt-9 w-full max-w-md lg:hidden"
-          style={{ ["--intro-delay" as string]: "380ms" }}
-        >
-          <DialogueBalloon />
-        </div>
-
-        {/* Escena principal */}
         <div className="relative mt-5 grid min-h-[590px] items-end gap-5 lg:mt-0 lg:grid-cols-[0.95fr_1.05fr] lg:gap-6">
-          {/* Globo en escritorio: ubicado al lado izquierdo de TrendyMan */}
-          <div
-            className="intro intro-pop absolute left-[-10%] top-[-15%] z-40 hidden w-[320px] lg:block xl:left-[-8%] xl:top-[-14%] xl:w-[345px]"
-            style={{ ["--intro-delay" as string]: "400ms" }}
-          >
-            <DialogueBalloon />
-          </div>
-
-          {/* TrendyMan */}
+          {/* TrendyMan y el globo son una sola pieza responsive */}
           <div className="relative flex min-h-[520px] items-end justify-center lg:min-h-[650px] lg:justify-end">
             <span
               aria-hidden
@@ -94,22 +77,22 @@ export function Portada() {
             />
 
             <div
-              className="intro intro-hero relative z-20 flex w-full max-w-[470px] items-end justify-center sm:max-w-[540px] lg:max-w-[610px] lg:translate-x-7"
+              className="intro intro-hero relative z-20 flex w-full max-w-[560px] items-end justify-center sm:max-w-[650px] lg:max-w-[735px] lg:translate-x-7"
               style={{ ["--intro-delay" as string]: "340ms" }}
             >
               <Image
-                src="/images/trendyman-portada.png"
-                alt="TrendyMan señalando el logotipo oficial de TrendyCom"
-                width={520}
-                height={780}
+                src="/images/portada/trendyman_portada_con_dialogo.png"
+                alt="TrendyMan señalando el logotipo de TrendyCom y presentando la propuesta mediante un globo de diálogo."
+                width={1239}
+                height={1724}
                 priority
-                sizes="(max-width: 1024px) 92vw, 48vw"
-                className="h-auto max-h-[76vh] w-auto object-contain drop-shadow-[10px_14px_0_rgba(0,0,0,0.22)]"
+                sizes="(max-width: 1024px) 96vw, 52vw"
+                className="h-auto max-h-[78vh] w-full object-contain drop-shadow-[10px_14px_0_rgba(0,0,0,0.18)]"
               />
             </div>
           </div>
 
-          {/* Logo oficial transparente */}
+          {/* Logotipo oficial transparente */}
           <div className="relative flex min-h-[470px] items-start justify-center lg:min-h-[650px] lg:pt-8">
             <span
               aria-hidden
@@ -139,7 +122,6 @@ export function Portada() {
         </div>
       </div>
 
-      {/* Indicador de desplazamiento */}
       <div
         className="intro intro-fade pointer-events-none absolute inset-x-0 bottom-5 flex flex-col items-center gap-1"
         style={{ ["--intro-delay" as string]: "760ms" }}
@@ -162,31 +144,5 @@ export function Portada() {
         </svg>
       </div>
     </section>
-  )
-}
-
-function DialogueBalloon() {
-  return (
-    <div className="relative aspect-[1024/771] w-full">
-      <Image
-        src="/images/portada/burbuja_dialogo.png"
-        alt=""
-        fill
-        sizes="(max-width: 1024px) 92vw, 390px"
-        className="object-contain"
-      />
-
-      <div className="absolute inset-x-[13%] top-[18%] z-10 flex h-[46%] items-center justify-center px-3 text-center">
-        <p className="text-comic text-[clamp(0.95rem,1.05vw,1.14rem)] leading-[1.04] text-navy">
-          TRENDYCOM SUBE DE NIVEL
-          <br />
-          TU ESTILO.
-          <br />
-          LO ÚLTIMO DE LA CULTURA GEEK
-          <br />
-          PARA TU DÍA A DÍA.
-        </p>
-      </div>
-    </div>
   )
 }

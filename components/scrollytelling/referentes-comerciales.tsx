@@ -29,7 +29,6 @@ export function ReferentesComerciales() {
       </div>
 
       <div className="mx-auto w-full max-w-6xl">
-        {/* Encabezado */}
         <header className="mb-10 lg:mb-14">
           <Reveal direction="left">
             <div className="flex items-center gap-3">
@@ -57,7 +56,6 @@ export function ReferentesComerciales() {
           </Reveal>
         </header>
 
-        {/* Declaración principal */}
         <Reveal direction="scale" delay={180}>
           <div className="relative overflow-hidden rounded-2xl border-4 border-ink bg-navy p-7 text-paper shadow-[8px_8px_0_0_var(--color-ink)] sm:p-9 lg:p-11">
             <span
@@ -87,16 +85,13 @@ export function ReferentesComerciales() {
           </div>
         </Reveal>
 
-        {/* Principios principales */}
         <div className="mt-16">
           <Reveal>
             <div className="mb-9 flex items-center gap-4">
               <span className="h-1 flex-1 rounded-full bg-red" />
-
               <span className="text-comic rounded-full border-2 border-ink bg-card px-4 py-1 text-center text-sm uppercase tracking-wider text-navy shadow-[3px_3px_0_0_var(--color-ink)]">
                 La fórmula comercial de TrendyCom
               </span>
-
               <span className="h-1 flex-1 rounded-full bg-yellow" />
             </div>
           </Reveal>
@@ -149,7 +144,6 @@ export function ReferentesComerciales() {
           </div>
         </div>
 
-        {/* Referencia 01 */}
         <div className="mt-16 grid items-start gap-8 lg:grid-cols-12">
           <Reveal direction="left" delay={70} className="lg:col-span-7">
             <ReferencePanel
@@ -192,7 +186,6 @@ export function ReferentesComerciales() {
           </div>
         </div>
 
-        {/* Referencia 02 */}
         <div className="mt-16 grid items-center gap-8 xl:grid-cols-12">
           <Reveal direction="left" delay={80} className="xl:col-span-5">
             <div className="comic-panel relative overflow-hidden rounded-2xl bg-card p-7 sm:p-8">
@@ -219,8 +212,8 @@ export function ReferentesComerciales() {
                 </p>
 
                 <p className="mt-6 border-l-4 border-yellow pl-5 text-pretty text-base leading-relaxed text-navy/80 sm:text-lg">
-                  En la práctica, TrendyMan podrá <strong>presentar</strong>
-                  colecciones y novedades, pero también <strong>señalar</strong>
+                  En la práctica, TrendyMan podrá <strong>presentar</strong>{" "}
+                  colecciones y novedades, pero también <strong>señalar</strong>{" "}
                   beneficios, promociones y acciones importantes. De esta
                   manera, su presencia tendrá una función narrativa y no será
                   únicamente decorativa.
@@ -244,7 +237,6 @@ export function ReferentesComerciales() {
           </Reveal>
         </div>
 
-        {/* Referencia 03 */}
         <div className="mt-16">
           <Reveal direction="scale">
             <ReferencePanel
@@ -279,9 +271,7 @@ export function ReferentesComerciales() {
 
                 <div className="mt-7 grid gap-6 md:grid-cols-3">
                   <div>
-                    <h4 className="text-comic text-2xl text-red">
-                      Plantear
-                    </h4>
+                    <h4 className="text-comic text-2xl text-red">Plantear</h4>
                     <p className="mt-3 text-base leading-relaxed text-navy/75">
                       La apertura presenta una situación o necesidad que invita
                       al usuario a seguir explorando.
@@ -313,7 +303,6 @@ export function ReferentesComerciales() {
           </Reveal>
         </div>
 
-        {/* Referencias 04 y 05 */}
         <div className="mt-16 grid items-stretch gap-8 xl:grid-cols-2">
           <Reveal direction="left" delay={80} className="h-full">
             <ReferencePanel
@@ -344,7 +333,6 @@ export function ReferentesComerciales() {
           </Reveal>
         </div>
 
-        {/* Traducción a TrendyCom */}
         <div className="mt-16">
           <Reveal direction="scale">
             <div className="relative overflow-hidden rounded-2xl border-4 border-ink bg-red p-7 text-paper shadow-[8px_8px_0_0_var(--color-ink)] sm:p-9 lg:p-11">
@@ -405,7 +393,6 @@ export function ReferentesComerciales() {
           </div>
         </div>
 
-        {/* Cierre */}
         <Reveal direction="scale" delay={180}>
           <div className="relative mt-16 overflow-hidden rounded-2xl border-4 border-ink bg-card p-7 shadow-[8px_8px_0_0_var(--color-ink)] sm:p-9 lg:p-11">
             <span
@@ -600,77 +587,44 @@ function NarrativeCard({
 
 function TrendyComCatalogPreview() {
   return (
-    <div className="comic-panel relative h-full overflow-hidden rounded-2xl bg-navy p-5 sm:p-7">
+    <div className="comic-panel relative h-full overflow-visible rounded-2xl bg-navy p-4 sm:p-6">
       <span
         aria-hidden
         className="action-lines pointer-events-none absolute -right-20 -top-20 h-72 w-72 opacity-20"
       />
 
-      <div className="relative overflow-hidden rounded-xl border-[3px] border-ink bg-paper-soft">
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b-[3px] border-ink bg-yellow px-5 py-4">
-          <span className="text-comic text-xl text-ink">
+      <div className="relative overflow-visible border-[4px] border-ink bg-paper-soft shadow-[7px_7px_0_0_var(--color-ink)]">
+        <div className="relative flex flex-wrap items-center justify-between gap-3 border-b-[4px] border-ink bg-yellow px-5 py-4">
+          <span
+            aria-hidden
+            className="absolute -left-7 bottom-0 h-full w-24 -skew-x-12 bg-orange"
+          />
+
+          <span className="text-comic relative text-xl text-ink sm:text-2xl">
             Colecciones en tendencia
           </span>
 
-          <span className="text-comic rotate-[-4deg] rounded-full border-2 border-ink bg-red px-4 py-2 text-sm text-paper shadow-[3px_3px_0_0_var(--color-ink)]">
+          <span className="text-comic relative rotate-[-3deg] border-[3px] border-ink bg-red px-4 py-2 text-sm text-paper shadow-[3px_3px_0_0_var(--color-ink)]">
             ¡TRENDING!
           </span>
         </div>
 
-        <div className="relative grid gap-5 overflow-hidden bg-[#EDEDED] p-5 lg:grid-cols-[0.8fr_1.2fr] lg:p-7">
+        <div className="relative overflow-visible bg-[#EDEDED] p-3 sm:p-5">
           <span
             aria-hidden
-            className="halftone-red pointer-events-none absolute -left-24 -top-20 h-80 w-80 rounded-full opacity-45"
+            className="halftone-red pointer-events-none absolute -left-24 -top-16 h-80 w-80 rounded-full opacity-30"
           />
 
-          <div className="relative flex min-h-[430px] items-end justify-center">
-            <Image
-              src="/images/origen-trendyman/origen_trendyman_04_trendyman.png"
-              alt="TrendyMan como anfitrión del catálogo de productos."
-              width={1094}
-              height={1641}
-              quality={92}
-              sizes="(max-width: 1024px) 70vw, 30vw"
-              className="relative z-10 h-auto max-h-[500px] w-full object-contain drop-shadow-[8px_10px_0_rgba(0,0,0,0.22)]"
-            />
+          <ComicCatalogTemplate />
 
-            <span className="text-comic absolute left-0 top-8 z-20 rotate-[-6deg] rounded-full border-2 border-ink bg-turquoise px-4 py-2 text-sm text-ink shadow-[4px_4px_0_0_var(--color-ink)]">
-              ¡MIRA ESTO!
+          <div className="relative mt-4 flex flex-wrap items-center justify-between gap-3 border-[3px] border-ink bg-paper px-4 py-3">
+            <p className="text-comic text-sm text-navy sm:text-base">
+              Tres estilos. Una misma identidad heroica.
+            </p>
+
+            <span className="text-comic rotate-[1deg] border-[3px] border-ink bg-turquoise px-4 py-2 text-xs uppercase text-ink shadow-[3px_3px_0_0_var(--color-ink)]">
+              ¡Elige tu versión!
             </span>
-          </div>
-
-          <div className="relative grid gap-4 sm:grid-cols-2">
-            <CatalogProduct
-              label="DC Studios"
-              title="Superman de James Gunn"
-              price="$59.900"
-              panelClass="bg-red"
-              accentClass="bg-yellow text-ink"
-            />
-
-            <CatalogProduct
-              label="DC Elseworlds"
-              title="Batman de Matt Reeves"
-              price="$64.900"
-              panelClass="bg-turquoise"
-              accentClass="bg-orange text-ink"
-            />
-
-            <CatalogProduct
-              label="Marvel"
-              title="Spider-Man: Brand New Day"
-              price="$57.900"
-              panelClass="bg-yellow"
-              accentClass="bg-red text-paper"
-            />
-
-            <CatalogProduct
-              label="Marvel Studios"
-              title="Avengers: Doomsday"
-              price="$62.900"
-              panelClass="bg-orange"
-              accentClass="bg-turquoise text-ink"
-            />
           </div>
         </div>
       </div>
@@ -678,57 +632,211 @@ function TrendyComCatalogPreview() {
   )
 }
 
-interface CatalogProductProps {
+/**
+ * Se conserva la misma página de cómic en todos los tamaños de pantalla.
+ *
+ * Geometría aprobada:
+ * - El primer corte desciende hacia la derecha.
+ * - El segundo corte asciende hacia la derecha.
+ * - Los tres paneles forman una sola página continua.
+ */
+function ComicCatalogTemplate() {
+  return (
+    <div className="relative z-10 aspect-[736/1315] w-full min-h-[760px] overflow-visible sm:min-h-[980px] lg:min-h-0">
+      <ComicProductPanel
+        clipPath="polygon(0 0, 100% 0, 100% 35%, 0 23%)"
+        panelClass="bg-turquoise"
+        primarySrc="/images/referentes-comerciales/catalogo/catalogo_camiseta_azul_frontal.png"
+        secondarySrc="/images/referentes-comerciales/catalogo/catalogo_camiseta_azul_perspectiva.png"
+        imageAlt="Camiseta azul de Superman mostrada completamente dentro de la viñeta superior."
+        label="Estilo clásico"
+        title="Superman: estilo clásico"
+        price="$64.900"
+        badgeClass="bg-yellow text-ink"
+        textClass="text-navy"
+        textBoxClass="left-[5%] top-[4%] h-[23%] w-[38%]"
+        imageBoxClass="right-[1%] top-[1.5%] h-[31%] w-[48%]"
+        actionLinesClass="right-[-3%] top-[-1%] h-[34%] w-[54%]"
+      />
+
+      <ComicProductPanel
+        clipPath="polygon(0 24%, 100% 36%, 100% 61%, 0 69%)"
+        panelClass="bg-red"
+        primarySrc="/images/referentes-comerciales/catalogo/catalogo_camiseta_roja_frontal.png"
+        secondarySrc="/images/referentes-comerciales/catalogo/catalogo_camiseta_roja_perspectiva.png"
+        imageAlt="Camiseta roja de Superman mostrada completamente dentro de la viñeta central."
+        label="Capa roja"
+        title="Superman: capa roja"
+        price="$59.900"
+        badgeClass="bg-yellow text-ink"
+        textClass="text-paper"
+        textBoxClass="right-[3%] top-[38%] h-[23%] w-[44%]"
+        imageBoxClass="left-[2%] top-[31%] h-[32%] w-[48%]"
+        actionLinesClass="left-[-4%] top-[29%] h-[37%] w-[55%]"
+      />
+
+      <ComicProductPanel
+        clipPath="polygon(0 70%, 100% 62%, 100% 100%, 0 100%)"
+        panelClass="bg-navy"
+        primarySrc="/images/referentes-comerciales/catalogo/catalogo_camiseta_negra_frontal.png"
+        secondarySrc="/images/referentes-comerciales/catalogo/catalogo_camiseta_negra_perspectiva.png"
+        imageAlt="Camiseta negra de Superman mostrada completamente dentro de la viñeta inferior."
+        label="Edición negra"
+        title="Superman: edición negra"
+        price="$57.900"
+        badgeClass="bg-red text-paper"
+        textClass="text-paper"
+        textBoxClass="left-[31%] top-[72%] h-[23%] w-[27%]"
+        imageBoxClass="right-[1%] top-[65.5%] h-[32%] w-[48%]"
+        actionLinesClass="right-[-5%] top-[64%] h-[35%] w-[48%]"
+      />
+
+      {/*
+        TrendyMan queda apoyado sobre la última línea exterior.
+        Su zona visible termina antes del texto del panel negro,
+        por lo que no cubre la camiseta, el título ni el precio.
+      */}
+      <div className="pointer-events-none absolute -bottom-[4.5%] -left-[5%] z-50 w-[38%]">
+        <Image
+          src="/images/referentes-comerciales/catalogo/catalogo_trendyman_sentado.png"
+          alt="TrendyMan sentado sobre la línea inferior del catálogo y señalando la camiseta negra."
+          width={1866}
+          height={2048}
+          quality={94}
+          sizes="(max-width: 640px) 42vw, (max-width: 1024px) 39vw, 32vw"
+          className="h-auto w-full object-contain drop-shadow-[8px_11px_0_rgba(0,0,0,0.24)] lg:drop-shadow-[11px_14px_0_rgba(0,0,0,0.24)]"
+        />
+      </div>
+    </div>
+  )
+}
+
+interface ComicProductPanelProps {
+  clipPath: string
+  panelClass: string
+  primarySrc: string
+  secondarySrc: string
+  imageAlt: string
   label: string
   title: string
   price: string
-  panelClass: string
-  accentClass: string
+  badgeClass: string
+  textClass: string
+  textBoxClass: string
+  imageBoxClass: string
+  actionLinesClass: string
 }
 
-function CatalogProduct({
+function ComicProductPanel({
+  clipPath,
+  panelClass,
+  primarySrc,
+  secondarySrc,
+  imageAlt,
   label,
   title,
   price,
-  panelClass,
-  accentClass,
-}: CatalogProductProps) {
+  badgeClass,
+  textClass,
+  textBoxClass,
+  imageBoxClass,
+  actionLinesClass,
+}: ComicProductPanelProps) {
   return (
-    <article className="rounded-xl border-[3px] border-ink bg-card p-3 shadow-[5px_5px_0_0_var(--color-ink)]">
+    <article
+      className="group absolute inset-0 overflow-hidden bg-ink"
+      style={{ clipPath }}
+    >
       <div
-        className={`relative flex aspect-square items-center justify-center overflow-hidden rounded-lg border-2 border-ink ${panelClass}`}
+        className={`absolute inset-[4px] sm:inset-[5px] ${panelClass}`}
+        style={{ clipPath }}
+      />
+
+      <span
+        aria-hidden
+        className="halftone pointer-events-none absolute inset-[4px] opacity-20 sm:inset-[5px]"
+        style={{ clipPath }}
+      />
+
+      <span
+        aria-hidden
+        className={`action-lines pointer-events-none absolute rounded-full opacity-[0.17] ${actionLinesClass}`}
+      />
+
+      <div
+        className={`absolute z-30 flex flex-col justify-center ${textBoxClass} ${textClass}`}
       >
         <span
-          aria-hidden
-          className="halftone pointer-events-none absolute inset-0 opacity-25"
-        />
+          className={`text-comic inline-flex w-fit border-2 border-ink px-2 py-1 text-[7px] uppercase shadow-[2px_2px_0_0_var(--color-ink)] sm:border-[3px] sm:px-3 sm:text-[10px] sm:shadow-[3px_3px_0_0_var(--color-ink)] ${badgeClass}`}
+        >
+          {label}
+        </span>
 
-        <div className="relative flex h-[72%] w-[62%] items-center justify-center rounded-md border-[3px] border-ink bg-paper">
-          <span className="text-comic rotate-[-4deg] text-center text-xl leading-tight text-navy">
-            TRENDY
-            <br />
-            SHIRT
+        <h4 className="text-comic mt-2 text-lg leading-[0.96] sm:mt-3 sm:text-3xl lg:text-4xl">
+          {title}
+        </h4>
+
+        <div className="mt-3 flex flex-wrap items-center gap-2 sm:mt-5 sm:gap-4">
+          <span className="text-base font-black sm:text-xl lg:text-2xl">
+            {price}
+          </span>
+
+          <span
+            className={`text-comic border-2 px-2 py-1 text-[7px] uppercase sm:border-[3px] sm:px-3 sm:py-2 sm:text-[10px] ${
+              textClass === "text-paper"
+                ? "border-paper bg-paper text-navy"
+                : "border-ink bg-navy text-paper"
+            }`}
+          >
+            Ver
           </span>
         </div>
       </div>
 
-      <span
-        className={`text-comic mt-4 inline-flex rounded-full border-2 border-ink px-3 py-1 text-[10px] uppercase tracking-wide ${accentClass}`}
-      >
-        {label}
-      </span>
-
-      <h4 className="text-comic mt-3 text-xl leading-tight text-navy">
-        {title}
-      </h4>
-
-      <div className="mt-4 flex items-center justify-between gap-3">
-        <span className="font-bold text-navy">{price}</span>
-
-        <span className="text-comic rounded-full border-2 border-ink bg-navy px-3 py-2 text-[10px] uppercase tracking-wide text-paper">
-          Ver
-        </span>
+      <div className={`absolute z-20 ${imageBoxClass}`}>
+        <ProductImageSwitch
+          className="h-full w-full"
+          primarySrc={primarySrc}
+          secondarySrc={secondarySrc}
+          alt={imageAlt}
+        />
       </div>
     </article>
+  )
+}
+
+interface ProductImageSwitchProps {
+  className: string
+  primarySrc: string
+  secondarySrc: string
+  alt: string
+}
+
+function ProductImageSwitch({
+  className,
+  primarySrc,
+  secondarySrc,
+  alt,
+}: ProductImageSwitchProps) {
+  return (
+    <div className={`relative min-w-0 ${className}`}>
+      <Image
+        src={primarySrc}
+        alt={alt}
+        fill
+        quality={94}
+        sizes="(max-width: 640px) 48vw, (max-width: 1024px) 45vw, 31vw"
+        className="object-contain p-0 transition duration-500 group-hover:opacity-0"
+      />
+
+      <Image
+        src={secondarySrc}
+        alt=""
+        fill
+        quality={94}
+        sizes="(max-width: 640px) 48vw, (max-width: 1024px) 45vw, 31vw"
+        className="object-contain p-0 opacity-0 transition duration-500 group-hover:opacity-100"
+      />
+    </div>
   )
 }
