@@ -2,6 +2,7 @@ import { ChapterNav } from "@/components/scrollytelling/chapter-nav"
 import { Concepto } from "@/components/scrollytelling/concepto"
 import { InterfazComic } from "@/components/scrollytelling/interfaz-comic"
 import { NavegacionNarrativa } from "@/components/scrollytelling/navegacion-narrativa"
+import { OrganizacionCatalogos } from "@/components/scrollytelling/organizacion-catalogos"
 import { Portada } from "@/components/scrollytelling/portada"
 import { SectionShell } from "@/components/scrollytelling/section-shell"
 import { SECTIONS } from "@/components/scrollytelling/sections-data"
@@ -25,12 +26,15 @@ export default function Page() {
 
       <NavegacionNarrativa />
 
+      <OrganizacionCatalogos />
+
       {SECTIONS.filter(
   (meta) =>
     meta.n !== 1 &&
     meta.n !== 2 &&
     meta.n !== 3 &&
-    meta.n !== 4,
+    meta.n !== 4 &&
+    meta.n !== 5,
 ).map((meta) => (
         <SectionShell key={meta.id} meta={meta} />
       ))}
