@@ -1,9 +1,15 @@
 import Image from "next/image"
+import { Comic_Relief } from "next/font/google"
 import type { ReactNode } from "react"
 
 import { Reveal } from "./reveal"
 
 const ACCENT = "var(--color-navy)"
+
+const comicRelief = Comic_Relief({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 export function SistemaTipografico() {
   return (
@@ -314,7 +320,7 @@ export function SistemaTipografico() {
             </div>
           </Reveal>
 
-          <div className="mt-8 grid items-stretch gap-8 lg:grid-cols-3">
+          <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2 xl:grid-cols-4">
             <Reveal direction="left" delay={80} className="h-full">
               <FontSample
                 src="/images/sistema-tipografico/sistema_tipografico_03.png"
@@ -339,7 +345,7 @@ export function SistemaTipografico() {
               />
             </Reveal>
 
-            <Reveal direction="right" delay={200} className="h-full">
+            <Reveal direction="scale" delay={200} className="h-full">
               <FontSample
                 src="/images/sistema-tipografico/sistema_tipografico_05.png"
                 alt="Muestra de Komika Title Kaps aplicada en diferentes niveles de texto sobre un fondo oscuro."
@@ -348,6 +354,10 @@ export function SistemaTipografico() {
                 title="Komika Title Kaps"
                 caption="Se utilizará para el cuerpo de texto, las descripciones de los productos y la lectura general. Complementa a la tipografía principal y conserva la estética de los diálogos escritos a mano."
               />
+            </Reveal>
+
+            <Reveal direction="right" delay={260} className="h-full">
+              <ComicReliefSample />
             </Reveal>
           </div>
         </div>
@@ -665,6 +675,71 @@ function FontSample({
             </p>
           </div>
         ) : null}
+      </figcaption>
+    </figure>
+  )
+}
+
+function ComicReliefSample() {
+  return (
+    <figure className="comic-panel relative flex h-full flex-col overflow-hidden rounded-2xl bg-card">
+      <div className="relative flex h-[380px] items-center justify-center overflow-hidden bg-paper-soft p-5 sm:h-[460px] lg:h-[520px]">
+        <span
+          aria-hidden
+          className="halftone pointer-events-none absolute inset-0"
+        />
+
+        <span
+          aria-hidden
+          className="action-lines pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full opacity-20"
+        />
+
+        <div
+          className={`${comicRelief.className} relative z-10 w-full max-w-sm border-[3px] border-ink bg-card p-5 shadow-[6px_6px_0_0_var(--color-ink)]`}
+        >
+          <span className="inline-flex border-2 border-ink bg-yellow px-3 py-1 text-xs font-bold uppercase tracking-wide text-ink">
+            Interfaz funcional
+          </span>
+
+          <div className="mt-5">
+            <p className="text-lg font-bold text-ink">CORREO ELECTRÓNICO</p>
+
+            <div className="mt-2 border-[3px] border-ink bg-paper-soft px-4 py-3 text-sm text-navy/60">
+              Ingresa tu correo electrónico
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <p className="text-lg font-bold text-ink">CONTRASEÑA</p>
+
+            <div className="mt-2 border-[3px] border-ink bg-paper-soft px-4 py-3 text-sm tracking-[0.25em] text-navy/60">
+              ••••••••
+            </div>
+          </div>
+
+          <div className="mt-5 border-[3px] border-ink bg-ink px-4 py-3 text-center text-lg font-bold text-paper">
+            INICIAR SESIÓN
+          </div>
+
+          <p className="mt-4 text-center text-sm font-bold underline">
+            ¿Olvidaste tu contraseña?
+          </p>
+        </div>
+      </div>
+
+      <figcaption className="flex flex-1 flex-col border-t-[3px] border-ink bg-card p-5 sm:p-6">
+        <h4 className="text-comic text-2xl text-navy">Comic Relief</h4>
+
+        <p className="mt-3 text-sm leading-relaxed text-navy/75 sm:text-base">
+          Comic Relief se incorpora como una tipografía complementaria para
+          textos funcionales y elementos de interfaz, especialmente formularios,
+          etiquetas, ayudas, mensajes y controles. Su trazo cercano y de
+          inspiración manual mantiene el tono de historieta, mientras su lectura
+          clara permite que acompañe a Komika Title y Komika Title Kaps sin
+          competir con ellas ni alterar la jerarquía principal. De esta manera,
+          la propuesta gráfica conserva coherencia con el wireframe y suma una
+          voz práctica para los momentos en los que la función debe prevalecer.
+        </p>
       </figcaption>
     </figure>
   )
